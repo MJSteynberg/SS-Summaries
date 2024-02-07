@@ -22,7 +22,7 @@ def get_pdf_summary(files, log, system_role, user_role):
             page_text += ' '
         
         response = client.chat.completions.create(
-                        model="gpt-4-turbo",
+                        model="gpt-4-turbo-preview",
                         messages=[
                             {"role": "system", "content": system_role.value},
                             {"role": "user", "content": user_role.value + page_text},

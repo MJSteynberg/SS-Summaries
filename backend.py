@@ -3,7 +3,7 @@ from openai import OpenAI
 from PyPDF2 import PdfReader
 import apikey
 import io
-apikeyVal  = "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"
+apikeyVal  = "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"
 
 client = OpenAI(api_key=apikeyVal)
 
@@ -29,7 +29,7 @@ def get_pdf_summary(files, log, system_role, user_role):
                             {"role": "user", "content": user_role.value + page_text},
                                 ],
                                     )
-        page_summary = response.choices[0].message.content
+        page_summary = 'test' #response.choices[0].message.content
 
         pdf_summary_text+=page_summary  + "\n\n"
         filename = filename.replace(os.path.splitext(filename)[1], "_summary.txt")

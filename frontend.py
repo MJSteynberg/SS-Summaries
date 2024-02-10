@@ -46,7 +46,7 @@ def upload_func():
     return upload
 
 upload_func()
-system_role = ui.textarea("System Role", value="Give the title and authors of the paper and Summarize the key points: ")
+system_role = ui.textarea("System Role", value="Give the title and authors of the paper and summarise the main sections: ")
 user_role = ui.textarea("User Role", value="You are a helpful research assistant.")
 
 log = ui.log(20).classes("w-full").style("height: 400px; color: #ffffff; background-color: #000000; ")

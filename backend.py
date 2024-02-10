@@ -3,7 +3,8 @@ from openai import OpenAI
 from PyPDF2 import PdfReader
 import apikey
 import io
-apikeyVal  = "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"
+import key
+apikeyVal = key.apiKey()
 
 client = OpenAI(api_key=apikeyVal)
 

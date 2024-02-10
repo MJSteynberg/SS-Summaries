@@ -30,7 +30,7 @@ def get_pdf_summary(files, log, system_role, user_role):
                             {"role": "user", "content": user_role.value + page_text},
                                 ],
                                     )
-        page_summary = 'test' #response.choices[0].message.content
+        page_summary = response.choices[0].message.content
 
         pdf_summary_text+=page_summary  + "\n\n"
         filename = filename.replace(os.path.splitext(filename)[1], "_summary.txt")

@@ -38,7 +38,7 @@ def upload_func():
     global file_list
     file_list = []
     upload = ui.upload(
-        label="Image",
+        label="Upload all PDF files to summarize:",
         on_upload=file_list.append,
         auto_upload=True,
         multiple=True,
